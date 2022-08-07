@@ -1,0 +1,122 @@
+#1 -adding elements to the list
+
+#basic list
+s=[10,20,30]
+#adding new element
+s.append([1,2])
+#checking result
+print(s)
+#extend our list with another list
+s.extend([3,4])
+print(s)
+
+
+
+#2  -Inserting elements in the list
+
+#The list
+s=[10,20,30]
+#adding element
+s.insert(1,-5)
+print(s)
+#adding another list
+s.insert(1,[1,-2])
+print(s)
+#adding 2 elements
+s[2:2]  =[3,4]
+print(s)
+#adding again some list
+s[2:3]=[100,200]
+print(s)
+
+
+
+#3-deleting elements from the list
+
+#creating a list
+s=[i*(10-i) for i in range(11)]
+#checking result
+print(s)
+#deleting 5th element and checking
+print ("deleting element ", s.pop(5))
+print (s)
+#deleting element 21
+s.remove(21)
+print(s)
+#deleting 3rd element
+del s[3]
+print(s)
+#deleting some elements
+s[2:5]=[]
+print(s)
+#deleting 2 elements and adding 5
+s[1:3]=[-1,-2,-3,-4,-5]
+print(s)
+
+
+#4- creating copy of the list
+
+#basic list
+a=[10,20,30]
+#chrcking the list
+print("the list a", a)
+#the assignment of variable
+b=a
+#making copy of the list using slicing
+c=a[:]
+#creating copy of the list using method cipe
+d=a.copy()
+#checking lists
+print ("b= " , b)
+print("c= ", c)
+print("d= ", d)
+print("changing element in basic list a[1]=0")
+a[1]=0
+#checking all lists again
+print ("a= " , a)
+print ("b= " , b)
+print("c= ", c)
+print("d= ", d)
+
+
+
+#5-creating copy of the list
+
+basic list
+x=[10,20, [100,200], 30, [300,400]]
+#making copy of the list
+y=x[:]
+#making another copy of the list
+z=x.copy()
+#cheking lists
+print ("x=", x)
+print ("y=", y)
+print ("z=", z)
+print ("changing elements in lists x[2][1]=0, and x[4]=0")
+#changing x[2][1]=0, in inside list
+x[2][1]=0
+#changing x[4]=0 in out list
+x[4]=0
+#checking
+print ("x=", x)
+print ("y=", y)
+print ("z=", z)
+
+
+#6-Making full copy of the list
+
+#importing module  -copy
+#basic list with inserted lists
+A=[[10,20], [[30,40],[50,60]] ]
+#making full copy
+B=copy.deepcopy(A)
+#checking lists
+print ("A is" , A)
+print ("B is" , B)
+print ("Now will apply commands  A[0][1]=0 and A[1][1][1]=0")
+#changing list elements
+A[0][1]=0
+A[1][1][1]=0
+#Checking lists
+print ("A is" , A)
+print ("B is" , B)
